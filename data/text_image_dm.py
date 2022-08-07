@@ -36,7 +36,8 @@ class TextImageDataset(Dataset):
         text_files = [*path.glob('**/*.txt')]
         image_files = [
             *path.glob('**/*.png'), *path.glob('**/*.jpg'),
-            *path.glob('**/*.jpeg'), *path.glob('**/*.bmp')
+            *path.glob('**/*.jpeg'), *path.glob('**/*.bmp'),
+            *path.glob('**/*.webp')
         ]
 
         text_files = {text_file.stem: text_file for text_file in text_files}
